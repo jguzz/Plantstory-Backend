@@ -18,8 +18,8 @@ jake = User.create(username: "jakeP", name: "jake", password_digest: "123", bio:
 plant1 = Plant.create(common_name: "snake plant", latin_name: "sansaveria")
 plant2 = Plant.create(common_name: "swiss-cheese plant", latin_name: "monstera")
 
-photo1 = Photo.create(img: "https://www.burpee.com/dw/image/v2/ABAQ_PRD/on/demandware.static/-/Sites-masterCatalog_Burpee/default/dw4299e75a/Images/Product%20Images/prod500591/prod500591.jpg?sw=322&sh=380&sm=fit")
-photo2 = Photo.create(img: "https://i.pinimg.com/originals/e6/98/b8/e698b81ad2f7f12f32b69d726a853263.jpg")
+post1 = Post.create(likes: 0, user_id: joey.id, plant_id: plant1.id, comment_id: nil)
+post2 = Post.create(likes: 2, user_id: jake.id, plant_id: plant2.id, comment_id: nil)
 
-post1 = Post.create(likes: 0, user_id: 1, plant_id: 1, photo_id: 1, comment_id: nil)
-post2 = Post.create(likes: 2, user_id: 2, plant_id: 2, photo_id: 2, comment_id: nil)
+photo1 = Photo.create(img: "https://www.burpee.com/dw/image/v2/ABAQ_PRD/on/demandware.static/-/Sites-masterCatalog_Burpee/default/dw4299e75a/Images/Product%20Images/prod500591/prod500591.jpg?sw=322&sh=380&sm=fit", post_id: post1.id)
+photo2 = Photo.create(img: "https://i.pinimg.com/originals/e6/98/b8/e698b81ad2f7f12f32b69d726a853263.jpg", post_id: post2.id )
